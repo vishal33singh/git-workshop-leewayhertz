@@ -6,6 +6,7 @@ public class Decimalcomparsion {
     }
 
     public static void main(String[] args) {
+        //vishal
         //taking input of float type from user	
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the double value");
