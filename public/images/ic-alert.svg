@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+  <g id="ic-alert" transform="translate(-927 -301)">
+    <rect id="img-profile" width="35" height="35" rx="17.5" transform="translate(927 301)" fill="#f3f3f6"/>
+    <g id="alert-circle-3" transform="translate(935 309)">
+      <circle id="Ellipse_65" data-name="Ellipse 65" cx="8" cy="8" r="8" transform="translate(2 2)" fill="none" stroke="#525272" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_111" data-name="Line 111" y2="4" transform="translate(10 6.5)" fill="none" stroke="#525272" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_112" data-name="Line 112" x2="0.01" transform="translate(9.999 13.2)" fill="none" stroke="#525272" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>
