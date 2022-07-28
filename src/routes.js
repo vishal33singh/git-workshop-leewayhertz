@@ -6,7 +6,7 @@ import BaseComponent from "./modules/baseComponent";
 import { history } from "./managers/history";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
-import { Login } from "./modules";
+import { Login } from "./modules/loginPage/signIn";
 
 class Routes extends BaseComponent {
   componentDidMount() {}

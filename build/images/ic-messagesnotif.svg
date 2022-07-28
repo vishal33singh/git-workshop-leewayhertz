@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-  <g id="ic-messagesnotif" transform="translate(-927 -224)">
-    <rect id="img-profile" width="35" height="35" rx="17.5" transform="translate(927 224)" fill="#f3f3f6"/>
-    <path id="ic-message-notification" d="M17,9.611a6.518,6.518,0,0,1-.7,2.956,6.611,6.611,0,0,1-5.911,3.656,6.518,6.518,0,0,1-2.956-.7L3,17l1.478-4.433a6.518,6.518,0,0,1-.7-2.956A6.611,6.611,0,0,1,7.433,3.7,6.518,6.518,0,0,1,10.389,3h.389A6.6,6.6,0,0,1,17,9.222Z" transform="translate(934.5 231.5)" fill="none" stroke="#525272" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-  </g>
-</svg>
