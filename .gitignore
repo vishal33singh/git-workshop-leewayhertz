@@ -5,9 +5,8 @@
 
 # Node artifact files
 node_modules/
-package-lock.json
-yarn.lock
 dist/
+
 # Compiled Java class files
 *.class
 

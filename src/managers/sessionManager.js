@@ -1,26 +1,25 @@
-// import Cookies from "universal-cookie";
+/**
+ * Created by Ayush Kulshrestha on 18/09/2019.
+ */
 
-// const cookies = new Cookies();
+import Cookies from 'universal-cookie';
+
+const cookies = new Cookies();
 
 export const sessionManager = {
-  setDataInCookies,
-  getDataFromCookies,
-  removeDataFromCookies,
-  removeAllData,
+    setDataInCookies,
+    getDataFromCookies,
+    removeDataFromCookies,
 };
 
 function setDataInCookies(data, key) {
-  localStorage.setItem(key, data);
+    cookies.set(key, JSON.stringify(data), {path: '/'});
 }
 
 function getDataFromCookies(key) {
-  return localStorage.getItem(key);
+    return cookies.get(key)
 }
 
 function removeDataFromCookies(key) {
-  localStorage.removeItem(key);
-}
-
-function removeAllData(key) {
-  localStorage.clear();
+    cookies.remove(key, {path: '/'});
 }
