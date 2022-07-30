@@ -18,6 +18,7 @@
     "react-bootstrap": "^0.32.3",
     "react-copy-to-clipboard": "^5.0.4",
     "react-dom": "^18.0.0",
+    "react-jazzicon": "^1.0.4",
     "react-material-toast": "^16.1.7",
     "react-redux": "^7.0.3",
     "react-router": "^5.0.0",

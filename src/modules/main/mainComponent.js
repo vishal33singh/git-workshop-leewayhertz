@@ -1,5 +1,5 @@
 import React from "react";
-import Billboard from "../billboard/index";
+// import Billboard from "../billboard/index";
 import Header from "../header/header";
 
 function MainComponent() {
