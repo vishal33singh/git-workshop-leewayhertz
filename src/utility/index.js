@@ -33,6 +33,7 @@ const utility = {
   epocToPrettyTime,
   getTimeDifference,
   getYearsList,
+  parseResponse,
 };
 export default utility;
 
@@ -58,6 +59,15 @@ function getYearsList(addedOn = new Date().getTime()) {
     durationList.push(i);
   }
   return durationList;
+}
+function parseResponse(promise) {
+  return promise
+
+    .then((data) => {
+      return [null, data];
+    })
+
+    .catch((err) => [err]);
 }
 
 function isNumber(n) {
