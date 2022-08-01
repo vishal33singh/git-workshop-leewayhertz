@@ -1,191 +1,91 @@
-import React, { useState } from "react";
-import Tabs from "react-bootstrap/Tabs";
-import { Badge, Tab } from "react-bootstrap";
-import { makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
-function createData(organizer, event, eventType, revenue, ticketSold, status) {
-  return { organizer, event, eventType, revenue, ticketSold, status };
-}
-//Main function
-export default function Events() {
-  const useStyles = makeStyles({
-    table: {
-      minWidth: 650,
-    },
-  });
-  const classes = useStyles();
-  const rows = [
-    createData(
-      "Tesla",
-      "Hard Summer Music Festival",
-      "Venue",
-      "$15,325",
-      "200 / 500",
-      " Published"
-    ),
-    createData(
-      "Apple",
-      "When we were you",
-      "Online Event",
-      "$15,325",
-      "200 / 500",
-      " Published"
-    ),
-    createData(
-      "Samsung",
-      "Buku 2022",
-      "Venue",
-      "$15,325",
-      "200 / 500",
-      " Published"
-    ),
-    createData(
-      "Tesla",
-      "Hard Summer Music Festival",
-      "Venue",
-      "$15,325",
-      "200 / 500",
-      " Published"
-    ),
-    createData(
-      "Tesla",
-      "Hard Summer Music Festival",
-      "Venue",
-      "$15,325",
-      "200 / 500",
-      " Published"
-    ),
-  ];
+import React, { Component, useState } from "react";
+import { history } from "../../managers/history";
+import { ChevronDownIcon } from "@heroicons/react/outline";
+import ClickOutside from "../../common/components/clickOutside";
+
+const spaceForTypes = [
+  {
+    id: 1,
+    contentName: "Venue",
+  },
+  {
+    id: 2,
+    contentName: "Online Event",
+  },
+];
+
+function Dashboard() {
+  const [showFeatureSelectOption, setShowFeatureSelectOption] = useState(false);
   return (
-    <>
-      <div className="bg-darkGrey-25 font-OpenSansRegular text-ft8 p-12.5 min-h-screen ml-250">
-        Events
-        <div className=" w-250 mt-7.5">
-          <Tabs className="mb-32 table-tabs ">
-            <Tab
-              eventKey="Top Tokens"
-              title="Published"
-              className="text-grey-50"
-            >
-              <TableContainer component={Paper}>
-                <Table className={classes.table} aria-label="simple table">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell>Organizer</TableCell>
-                      <TableCell>Event</TableCell>
-                      <TableCell>Event Type</TableCell>
-                      <TableCell>Revenue</TableCell>
-                      <TableCell>Ticket Sold</TableCell>
-                      <TableCell>Status</TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {rows.map((row) => (
-                      <TableRow
-                        key={row.name}
-                        sx={{
-                          "&:last-child td, &:last-child th": { border: 0 },
-                        }}
+    <div className="pl-4 pr-4 w-full bg-Slate-200 min-h-screen tablet:px-10 mobile:px-4  pb-16 ">
+      <div className="w-full h-235 pb-3 px-5.5 tablet:w-full tablet:pb-18 pt-1.5 rounded-2xl tablet:mt-13 mobile:pb-18 mobile:w-full mobile:mt-10">
+        <div className="flex w-full mt-10">
+          <p className="text-ft8 font-OpenSansSemiBold mt-6 pr-4.5 text-black-50">
+            WhiteList
+          </p>
+
+          <div className="w-full flex flex-row-reverse">
+            <div className="w-44 h-11 text-ft3 text-black-25 bg-white ml-5">
+              All Time
+              <img
+                className=" mt-0 w-3 h-3  cursor-pointer"
+                alt=""
+                src="images/down-arrow.svg"
+              />
+            </div>
+            <div className="flex justify-center w-44 h-11 text-ft3 text-black-25 bg-white ml-5">
+              Event type
+              <img
+                className=" mt-0 w-3 h-3  cursor-pointer"
+                alt=""
+                src="images/down-arrow.svg"
+              />
+            </div>
+
+            <div className="text-ft5 cursor-pointer flex items-center relative bg-white font-Montserrat font-normal">
+              <span
+                onClick={() => setShowFeatureSelectOption((prev) => !prev)}
+                className={`text-ft5 w-44 h-11 text-black-25 cursor-pointer items-center relative  font-Montserrat font-normal ${
+                  showFeatureSelectOption && ""
+                }`}
+              >
+                Event type
+              </span>
+              <ChevronDownIcon
+                onClick={() => setShowFeatureSelectOption((prev) => !prev)}
+                className={`w-5 text-white select-none cursor-pointer ml-auto transform duration-100 ${
+                  showFeatureSelectOption && "-rotate-180"
+                }`}
+              />
+              {showFeatureSelectOption && (
+                <ClickOutside
+                  onClickOutside={() => setShowFeatureSelectOption(false)}
+                  className="absolute w-50 bg-black-25 rounded-md top-12 z-20 p-1 right-0 shadow-lg text-black-50"
+                >
+                  <div className="px-4 pt-3 pb-1 bg-linear-gred-blue bg-center rounded-md">
+                    {spaceForTypes.map((data, index) => (
+                      <div
+                        key={index}
+                        className="text-ft2 font-MontserratMedium pb-2 text-white cursor-pointer"
                       >
-                        <TableCell component="th" scope="row">
-                          {row.organizer}
-                        </TableCell>
-                        <TableCell className="text-right">
-                          {row.event}
-                        </TableCell>
-                        <TableCell>{row.eventType}</TableCell>
-                        <TableCell>{row.revenue}</TableCell>
-                        <TableCell>{row.ticketSold}</TableCell>
-                        <TableCell>{row.status}</TableCell>
-                      </TableRow>
+                        {data.contentName}
+                      </div>
                     ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </Tab>
-            <Tab eventKey="Upcoming" title={<>Upcoming</>}>
-              <TableContainer component={Paper}>
-                <Table className={classes.table} aria-label="simple table">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell>Organizer</TableCell>
-                      <TableCell>Event</TableCell>
-                      <TableCell>Event Type</TableCell>
-                      <TableCell>Revenue</TableCell>
-                      <TableCell>Ticket Sold</TableCell>
-                      <TableCell>Status</TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {rows.map((row) => (
-                      <TableRow
-                        key={row.name}
-                        sx={{
-                          "&:last-child td, &:last-child th": { border: 0 },
-                        }}
-                      >
-                        <TableCell component="th" scope="row">
-                          {row.organizer}
-                        </TableCell>
-                        <TableCell className="text-right">
-                          {row.event}
-                        </TableCell>
-                        <TableCell>{row.eventType}</TableCell>
-                        <TableCell>{row.revenue}</TableCell>
-                        <TableCell>{row.ticketSold}</TableCell>
-                        <TableCell>{row.status}</TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </Tab>
-            <Tab eventKey="Past" title={<>Past</>}>
-              <TableContainer component={Paper}>
-                <Table className={classes.table} aria-label="simple table">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell>Organizer</TableCell>
-                      <TableCell>Event</TableCell>
-                      <TableCell>Event Type</TableCell>
-                      <TableCell>Revenue</TableCell>
-                      <TableCell>Ticket Sold</TableCell>
-                      <TableCell>Status</TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {rows.map((row) => (
-                      <TableRow
-                        key={row.name}
-                        sx={{
-                          "&:last-child td, &:last-child th": { border: 0 },
-                        }}
-                      >
-                        <TableCell component="th" scope="row">
-                          {row.organizer}
-                        </TableCell>
-                        <TableCell className="text-right">
-                          {row.event}
-                        </TableCell>
-                        <TableCell>{row.eventType}</TableCell>
-                        <TableCell>{row.revenue}</TableCell>
-                        <TableCell>{row.ticketSold}</TableCell>
-                        <TableCell>{row.status}</TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </Tab>
-          </Tabs>
+                  </div>
+                </ClickOutside>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 w-full justify-center">
+          <div className=""></div>
+          <div></div>
+          <div></div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
+
+export default Dashboard;
