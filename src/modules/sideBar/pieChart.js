@@ -1,7 +1,7 @@
 import * as React from "react";
 import { PieChart, Pie, Cell } from "recharts";
 
-const COLORS = ["#58DDCE"];
+const COLORS = ["#395FF1"];
 
 export default function PieCharts(props) {
   const data = [{ name: "Prize Money", value: props.sum }];
