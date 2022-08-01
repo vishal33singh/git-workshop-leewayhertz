@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import Main from "./modules/main/index";
 import { history } from "./managers/history";
 import Sidebar from "./modules/sideBar/sidebar";
+import Dashboard from "./modules/sideBar/dashboard";
 
 const Routes = () => {
   return (
@@ -12,6 +13,7 @@ const Routes = () => {
       <Switch>
         <Route exact path={"/"} component={Main} />
         <Route exact path={"/side-bar"} component={Sidebar} />
+        <Route exact path={"/dash-board"} component={Dashboard} />
         <Redirect exact from="*" to="/" />
       </Switch>
     </Router>
