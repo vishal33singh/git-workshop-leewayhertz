@@ -64,10 +64,10 @@ export default function Events() {
   ];
   return (
     <>
-      <div className="bg-primary-200 font-OpenSansSemiBold text-ft22 p-12.5 min-h-screen ml-50">
+      <div className="bg-darkGrey-25 font-OpenSansRegular text-ft8 p-12.5 min-h-screen ml-250">
         Events
-        <div className=" w-254 mt-7.5">
-          <Tabs className="mb-33 table-tabs ">
+        <div className=" w-250 mt-7.5">
+          <Tabs className="mb-32 table-tabs ">
             <Tab
               eventKey="Top Tokens"
               title="Published"

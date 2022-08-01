@@ -7,6 +7,7 @@ import { history } from "./managers/history";
 import Sidebar from "./modules/sideBar/sidebar";
 import Dashboard from "./modules/sideBar/dashboard";
 import Event from "./modules/sideBar/event";
+import WhiteList from "./modules/sideBar/whiteList";
 
 const Routes = () => {
   return (
@@ -16,6 +17,7 @@ const Routes = () => {
         <Route exact path={"/side-bar"} component={Sidebar} />
         <Route exact path={"/dash-board"} component={Dashboard} />
         <Route exact path={"/events"} component={Event} />
+        <Route exact path={"/white-list"} component={WhiteList} />
         <Redirect exact from="*" to="/" />
       </Switch>
     </Router>
