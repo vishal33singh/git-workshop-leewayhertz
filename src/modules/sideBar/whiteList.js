@@ -26,15 +26,15 @@ function WhiteList() {
             WhiteList
           </p>
         </div>
-        <div className="w-full flex pr-15 mt-10">
-          <div className="flex bg-white rounded-3xl w-77.25 h-11.5 px-3 items-center mt-15 content-center">
+        <div className="w-full flex pr-15 mt-10 mobile:mt-3 tablet:mt-5">
+          <div className="flex bg-white rounded-3xl w-77.25 mobile:w-32 tablet:w-52 h-11.5 px-3 items-center mt-15 content-center">
             <img
               src="/images/search.svg"
               alt="search"
               className="w-3.57 h-3.57 mt-0.5"
             />
             <input
-              className="h-11.5 rounded-3xl bg-transparent text-black-50 focus:outline-none w-full pb-0.5 pl-3 text-ft2"
+              className="h-11.5 rounded-3xl bg-transparent text-black-50 focus:outline-none w-full mobile:w-32 tablet:w-45 pb-0.5 pl-3 text-ft2"
               placeholder="Search"
             />
           </div>
@@ -44,7 +44,7 @@ function WhiteList() {
           </div>
         </div>
 
-        <div className="overflow-x-auto relative mobile:hidden tablet:hidden">
+        <div className="overflow-x-auto relative bg-white px-5 mt-8 rounded-xl mobile:hidden tablet:hidden">
           <table className="w-full mt-9 ">
             <tr className="w-full gap-x-0 mt-8 px-2 justify-items-start font-PoppinsSemiBold text-ft1 text-darkGrey-50 border-solid">
               <th className=" text-left text-tHead text-ft1">Name</th>
@@ -82,7 +82,7 @@ function WhiteList() {
           </table>
         </div>
         <div className="hidden mobile:block tablet:block">
-          <div className="mobile:px-4 tablet:px-7 tablet:overflow-x-auto">
+          <div className="mobile:px-4 tablet:px-7 tablet:overflow-x-auto bg-white px-5 mt-8 rounded-xl">
             <div className="tablet:overflow-x-auto mobile:overflow-x-auto">
               <table className="w-full mt-9">
                 <tr className="w-full gap-x-0 mt-8 px-2 justify-items-start font-PoppinsSemiBold text-ft1 text-darkGrey-50 border-solid mobile:whitespace-nowrap tablet:whitespace-nowrap">
