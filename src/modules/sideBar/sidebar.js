@@ -1,13 +1,12 @@
 import React from "react";
-import Jazzicon from "react-jazzicon";
 
 function sidebar() {
   return (
     <div className="min-h-screen h-full">
-      <div className="w-64 min-h-screen h-full bg-grey-100">
-        <div>
+      <div className="w-64 min-h-screen h-full bg-grey-100 ">
+        <div className="">
           <img
-            className="mx-auto mt-15 w-40"
+            className="mx-auto w-40 pt-9"
             alt=""
             src="./images/img-logo.png"
           />

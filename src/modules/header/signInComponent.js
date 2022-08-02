@@ -7,7 +7,7 @@ const Header = () => {
     <div className="">
       <div className=" bg-Slate-200 pt-28 h-screen ">
         <div className="w-125 h-135.5 bg-white text-center m-auto rounded-lg px-5">
-          <div className="w-full mt-5 flex flex-col justify-center ">
+          <div className="w-full flex flex-col justify-center ">
             <h1 className="text-ft7 font-OpenSansSemiBold mt-7.75 text-white">
               Login with nft ticketing
             </h1>
