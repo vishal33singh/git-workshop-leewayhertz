@@ -18,7 +18,7 @@ function Dashboard() {
       </div>
       {isOpen && <Sidebar check={isOpen} close={() => setIsOpen(false)} />}
       <div className="w-full min-h-screen h-full tablet:h-screen bg-grey-100 px-10 pt-10 ml-1">
-        <div className="flex w-full justify-between mobile:block">
+        <div className="flex w-full justify-between mt-10 mobile:block">
           <div className="font-OpenSansSemiBold text-ft7 mobile:mb-5">
             Dashboard
           </div>

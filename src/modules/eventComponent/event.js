@@ -17,7 +17,7 @@ function Events() {
       </div>
       {isOpen && <Sidebar check={isOpen} close={() => setIsOpen(false)} />}
       <div className="flex w-full ">
-        <p className="text-ft8 font-OpenSansSemiBold mt-25.5 pr-4.5 text-black-50">
+        <p className="text-ft8 font-OpenSansSemiBold mt-35 pr-4.5 ml-9 text-black-50">
           Events
         </p>
       </div>
