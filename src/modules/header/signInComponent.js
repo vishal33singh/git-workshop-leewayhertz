@@ -6,7 +6,7 @@ const signInComponent = () => {
   return (
     <div className="">
       <div className=" bg-Slate-200 pt-28 h-screen ">
-        <div className="w-125 h-135.5 bg-white text-center m-auto rounded-lg px-5">
+        <div className="w-1/3 tablet:w-2/3 mobile:w-11/12 h-135.5 bg-white text-center m-auto rounded-lg px-5">
           <div className="w-full flex flex-col justify-center ">
             <h1 className="text-ft7 font-OpenSansSemiBold mt-7.75 text-white">
               Login with nft ticketing
