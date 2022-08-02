@@ -45,7 +45,7 @@ function Dashboard() {
         <div className="bg-white h-45 w-1/3 mobile:w-full px-8 grid content-center rounded-xl">
           <div className="flex">
             <img
-              className="w-20 h-20"
+              className="w-20 h-20 tablet:w-15 tablet:h-15"
               alt=""
               src="/images/ic-dashboard-revenue.png"
             />
@@ -62,12 +62,12 @@ function Dashboard() {
         <div className="bg-white h-45 w-1/3 mobile:w-full px-8 grid content-center rounded-xl mobile:my-5 tablet:px-0 tablet:pl-8">
           <div className="flex">
             <img
-              className="w-20 h-20"
+              className="w-20 h-20 tablet:w-15 tablet:h-15"
               alt=""
               src="/images/ic-dashboard-revenue.png"
             />
             <div className="pl-5 2xl:pl-10 tablet:pl-5 grid content-center">
-              <div className="font-OpenSansRegular text-ft7 tablet:text-ft4 whitespace-nowrap">
+              <div className="font-OpenSansRegular text-ft7 tablet:text-ft4 ">
                 Total Attendees
               </div>
               <div className="font-OpenSansSemiBold text-ft7 tablet:text-ft4 text-blue-25">
@@ -79,7 +79,7 @@ function Dashboard() {
         <div className="bg-white h-45 w-1/3 mobile:w-full px-8 grid content-center rounded-xl">
           <div className="flex">
             <img
-              className="w-20 h-20"
+              className="w-20 h-20 tablet:w-15 tablet:h-15"
               alt=""
               src="/images/ic-dashboard-ticketSold.png"
             />
@@ -108,7 +108,7 @@ function Dashboard() {
             <div className="bg-white w-full h-96 grid content-center pl-2.25% rounded-xl tablet:pl-0 tablet:w-full mobile:pl-0 mobile:w-125">
               <div className="flex w-full">
                 <PieCharts />
-                <div className="grid grid-cols-1 h-36 mobile:grid mobile:grid-cols-2 mobile:h-24 mobile:mt-3 mobile:px-0.5 pl-4% tablet:pl-1% mobile:pl-2.25% mobile:pt-1%">
+                <div className="grid grid-cols-1 h-36 mobile:grid mobile:grid-cols-2 mobile:h-24 mobile:mt-3 mobile:px-0.5 pl-6 tablet:pl-2 mobile:pl-4 mobile:pt-2">
                   <div className="flex gap-2">
                     <div className="w-3 h-3 bg-blue-25 mt-1.5 rounded-full mr-1.5"></div>
                     <div>
@@ -121,7 +121,7 @@ function Dashboard() {
                     </div>
                   </div>
                   <div className="flex gap-2">
-                    <div className="w-3 h-3 bg-grey-90 mt-1.5 rounded-full mr-1.5"></div>
+                    <div className="w-3 h-3 bg-darkGrey-50 mt-1.5 rounded-full mr-1.5"></div>
                     <div>
                       <div className="text-ft0 font-OpenSansRegular text-grey-95 mobile:mr-5">
                         Artist
@@ -132,7 +132,7 @@ function Dashboard() {
                     </div>
                   </div>
                   <div className="flex gap-2">
-                    <div className="w-3 h-3 bg-grey-95 mt-1.5 rounded-full mr-1.5"></div>
+                    <div className="w-3 h-3 bg-red-50 mt-1.5 rounded-full mr-1.5"></div>
                     <div>
                       <div className="text-ft0 font-OpenSansRegular text-grey-95 mobile:mr-5">
                         Promoter

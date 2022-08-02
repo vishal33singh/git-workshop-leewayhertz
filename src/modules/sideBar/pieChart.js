@@ -1,10 +1,12 @@
 import * as React from "react";
 import { PieChart, Pie, Cell } from "recharts";
-
-const COLORS = ["#395FF1"];
-
-export default function PieCharts(props) {
-  const data = [{ name: "Prize Money", value: props.sum }];
+const data = [
+  { name: "Games Earnings", value: 20 },
+  { name: "Sponsorship Earnings", value: 40 },
+  { name: "Prize Money", value: 40 },
+];
+const COLORS = ["#333333", "#395FF1", "#FF6142"];
+export default function PieCharts() {
   return (
     <div>
       <PieChart width={200} height={200}>
