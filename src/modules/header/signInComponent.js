@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { history } from "../../managers/history";
 import sidebar from "../sideBar/sidebar";
 
-const Header = () => {
+const signInComponent = () => {
   return (
     <div className="">
       <div className=" bg-Slate-200 pt-28 h-screen ">
@@ -49,8 +49,8 @@ const Header = () => {
             <p className="font-OpenSansRegular text-ft4 text-darkGrey-100 "></p>
           </div>
           <button
-            // onClick={history.push("")}
-            type="submit"
+            onClick={() => history.push(`/dash-board`)}
+            // type="submit"
             className="bg-darkGrey-25 py-6 text-ft4 mt-13 text-white w-full rounded-full font-OpenSansSemiBold"
           >
             <div className="">Sign in</div>
@@ -61,4 +61,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default signInComponent;

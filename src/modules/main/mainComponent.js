@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "../header/signInComponent";
+import SignInComponent from "../header/signInComponent";
 
 function MainComponent() {
   return (
     <div className="">
       <div className="">
-        <Header />
+        <SignInComponent />
       </div>
     </div>
   );
