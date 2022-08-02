@@ -10,7 +10,6 @@ function WhiteList() {
       mockUser.getTransactions()
     );
     if (error) return;
-    console.log(response + "123456");
     if (response) setRows(response.responseData);
   };
 

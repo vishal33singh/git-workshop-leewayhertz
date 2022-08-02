@@ -1,13 +1,11 @@
 import React from "react";
-// import Billboard from "../billboard/index";
-import Header from "../header/header";
+import Header from "../header/signInComponent";
 
 function MainComponent() {
   return (
     <div className="">
       <div className="">
         <Header />
-        {/* <Billboard /> */}
       </div>
     </div>
   );

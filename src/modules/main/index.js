@@ -1,25 +1,20 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import MainComponent from "./mainComponent";
 
-class Main extends Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            email: "",
-            password: ""
-        }
-    }
+class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password: "",
+    };
+  }
 
-    componentDidMount(){
+  componentDidMount() {}
 
-    }
-
-    render(){
-        return (
-            <MainComponent/>
-        )
-    }
-
+  render() {
+    return <MainComponent />;
+  }
 }
 
-export default Main
+export default Main;

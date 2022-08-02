@@ -1,30 +1,24 @@
-import React from "react";
-import { Router, Route } from "react-router-dom";
+import React, { lazy, Suspense } from "react";
+import { Router, Route, withRouter } from "react-router-dom";
 import { Redirect, Switch } from "react-router";
-import { connect } from "react-redux";
 import Main from "./modules/main/index";
 import { history } from "./managers/history";
-import Sidebar from "./modules/sideBar/sidebar";
-import Dashboard from "./modules/sideBar/dashboard";
-import Event from "./modules/sideBar/event";
-import WhiteList from "./modules/sideBar/whiteList";
+const DashBoardContainer = withRouter(
+  lazy(() => import("./modules/common/componentHandler"))
+);
 
 const Routes = () => {
   return (
     <Router history={history}>
-      <Switch>
-        <Route exact path={"/"} component={Main} />
-        <Route exact path={"/side-bar"} component={Sidebar} />
-        <Route exact path={"/dash-board"} component={Dashboard} />
-        <Route exact path={"/events"} component={Event} />
-        <Route exact path={"/white-list"} component={WhiteList} />
-        <Redirect exact from="*" to="/" />
-      </Switch>
+      <Suspense fallback={"..."}>
+        <Switch>
+          <Route exact path={"/:menu"} component={DashBoardContainer} />
+          <Route exact path={"/"} component={Main} />
+          <Redirect exact from="*" to="/" />
+        </Switch>
+      </Suspense>
     </Router>
   );
 };
 
-const mapStateToProps = (state) => {
-  return { user: state.user };
-};
-export default connect(mapStateToProps)(Routes);
+export default Routes;
