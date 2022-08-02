@@ -14,31 +14,35 @@ function sidebar() {
           />
         </div>
         <NavLink
-          activeClassName="bg-Slate-100 w-260px h-50px"
+          activeClassName="bg-white w-64 h-15 border-l-8 border-blue-25"
           to="/dash-board"
-          className="flex w-full mt-25.5 justify-start ml-15 "
+          className="flex w-full mt-25.5 justify-start items-center "
         >
-          <img className="w-5 " alt="" src="./images/ic-statistics.svg" />
+          <img className="w-5 ml-15" alt="" src="./images/ic-statistics.svg" />
           <p className="ml-5 font-OpenSansRegular text-ft3 text-black-25">
             Dashboard
           </p>
         </NavLink>
         <NavLink
-          activeClassName="bg-Slate-100 w-260px h-50px"
+          activeClassName="bg-white w-64 h-15 border-l-8 border-blue-25"
           to="/events"
-          className="flex w-full mt-10 justify-start ml-15"
+          className="flex w-full mt-10 justify-start items-center"
         >
-          <img className="w-5 " alt="" src="./images/ic-events.svg" />
+          <img className="w-5 ml-15 " alt="" src="./images/ic-events.svg" />
           <p className="ml-5 font-OpenSansRegular text-ft3 text-black-25">
             events
           </p>
         </NavLink>
         <NavLink
-          activeClassName="bg-Slate-100 w-260px h-50px"
+          activeClassName="bg-white w-64 h-15 border-l-8 border-blue-25"
           to="/white-list"
-          className="flex w-full mt-10 justify-start ml-15"
+          className="flex w-full mt-10 justify-start items-center"
         >
-          <img className="w-5 " alt="" src="./images/ic-usermanagement.svg" />
+          <img
+            className="w-5 ml-15"
+            alt=""
+            src="./images/ic-usermanagement.svg"
+          />
           <p className="ml-5 font-OpenSansRegular text-ft3 text-black-25">
             Whitelist
           </p>
