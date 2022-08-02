@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Sidebar from "../sideBar/sidebar";
 
-function Dashboard() {
+function Events() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="pl-4 pr-4 w-full bg-grey-100 min-h-screen ml-1 tablet:px-10 mobile:px-4 ">
+      <div className="hidden tablet:block mobile:block tablet:absolute mobile:absolute cursor-pointer">
+        <img
+          src="/images/right-scroll.svg"
+          alt=""
+          className="pt-5 tablet:ml-3 mobile:ml-3"
+          onClick={() => {
+            setIsOpen(true);
+          }}
+        />
+      </div>
+      {isOpen && <Sidebar check={isOpen} close={() => setIsOpen(false)} />}
       <div className="flex w-full ">
-        <p className="text-ft8 font-OpenSansSemiBold mt-6 pr-4.5 text-black-50">
+        <p className="text-ft8 font-OpenSansSemiBold mt-25.5 pr-4.5 text-black-50">
           Events
         </p>
       </div>
@@ -12,4 +25,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Events;
