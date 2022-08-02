@@ -18,7 +18,7 @@ function WhiteList() {
   }, []);
 
   return (
-    <div className="pl-4 pr-4 w-full bg-grey-25 ml-1 min-h-screen tablet:grid tablet:grid-cols-1 tablet:px-10 mobile:px-4 mobile:grid mobile:grid-cols-1 pb-16 mobile:pl-0 mobile:pr-0 mobile:pb-0 tablet:pl-0 tablet:pr-0 tablet:pb-0 mobile:mt-0 tablet:mt-0">
+    <div className="pl-4 pr-4 w-full bg-grey-100 ml-1 min-h-screen tablet:grid tablet:grid-cols-1 tablet:px-10 mobile:px-4 mobile:grid mobile:grid-cols-1 pb-16 mobile:pl-0 mobile:pr-0 mobile:pb-0 tablet:pl-0 tablet:pr-0 tablet:pb-0 mobile:mt-0 tablet:mt-0">
       <div className="w-full h-235 pb-3 px-5.5 tablet:w-full tablet:pb-18 pt-1.5 rounded-2xl tablet:mt-13 mobile:pb-18 mobile:w-full mobile:mt-10">
         <div className="flex w-full mobile:grid">
           <p className="text-ft8 font-OpenSansSemiBold mt-6 pr-4.5 text-black-50">

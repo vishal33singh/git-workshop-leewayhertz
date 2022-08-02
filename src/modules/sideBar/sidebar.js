@@ -16,7 +16,7 @@ function sidebar() {
         <NavLink
           activeClassName="bg-white w-64 h-15 border-l-8 border-blue-25"
           to="/dash-board"
-          className="flex w-full mt-25.5 justify-start items-center "
+          className="flex w-full mt-25.5 justify-start items-center cursor-pointer"
         >
           <img className="w-5 ml-15" alt="" src="./images/ic-statistics.svg" />
           <p className="ml-5 font-OpenSansRegular text-ft3 text-black-25">
@@ -26,7 +26,7 @@ function sidebar() {
         <NavLink
           activeClassName="bg-white w-64 h-15 border-l-8 border-blue-25"
           to="/events"
-          className="flex w-full mt-10 justify-start items-center"
+          className="flex w-full mt-10 justify-start items-center cursor-pointer"
         >
           <img className="w-5 ml-15 " alt="" src="./images/ic-events.svg" />
           <p className="ml-5 font-OpenSansRegular text-ft3 text-black-25">
@@ -36,7 +36,7 @@ function sidebar() {
         <NavLink
           activeClassName="bg-white w-64 h-15 border-l-8 border-blue-25"
           to="/white-list"
-          className="flex w-full mt-10 justify-start items-center"
+          className="flex w-full mt-10 justify-start items-center cursor-pointer"
         >
           <img
             className="w-5 ml-15"

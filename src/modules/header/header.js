@@ -4,7 +4,7 @@ import Jazzicon from "react-jazzicon";
 function sidebar() {
   return (
     <div className="flex">
-      <div className="flex w-full h-25.5 shadow-inner bg-grey-100 ml-1">
+      <div className="header flex w-full h-25.5 shadow-inner bg-white ml-1">
         <div>
           <img
             className="ml-13 mt-10 my-0 w-5 h-4 cursor-pointer"
