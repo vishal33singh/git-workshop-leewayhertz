@@ -26,9 +26,9 @@ function WhiteList() {
           src="/images/right-scroll.svg"
           alt=""
           className="pt-5 tablet:ml-3 mobile:ml-3"
-          onClick={() => {
-            setIsOpen(true);
-          }}
+          // onClick={() => {
+          //   setIsOpen(true);
+          // }}
         />
       </div>
       {isOpen && <Sidebar check={isOpen} close={() => setIsOpen(false)} />}

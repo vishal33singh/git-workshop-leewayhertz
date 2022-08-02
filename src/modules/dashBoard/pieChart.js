@@ -1,9 +1,9 @@
 import * as React from "react";
 import { PieChart, Pie, Cell } from "recharts";
 const data = [
-  { name: "Games Earnings", value: 20 },
-  { name: "Sponsorship Earnings", value: 40 },
-  { name: "Prize Money", value: 40 },
+  { name: "Artist", value: 20 },
+  { name: "Organiser", value: 40 },
+  { name: "Promoter", value: 40 },
 ];
 const COLORS = ["#333333", "#395FF1", "#FF6142"];
 export default function PieCharts() {
